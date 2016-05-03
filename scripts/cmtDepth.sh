@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# MOMENT TENSOR DEPTH ANALYSIS SCRIPT
+# NATE LINDSEY April 2016
 outfile=temp.out
 
 # TITLE

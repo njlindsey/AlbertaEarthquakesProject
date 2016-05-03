@@ -1,0 +1,10 @@
+bp p 2 c 0.02 1
+
+run_mkdatafile STATION
+FKRPROG < MODEL_gil7
+wvint9 (choose d for displacement)
+run_fkrsortiso DEPTH
+
+run_filtsyniso gil7_{$n}d8.disp gil7_{$n}d8
+run_mksyndata
+tdmt_invc_iso 

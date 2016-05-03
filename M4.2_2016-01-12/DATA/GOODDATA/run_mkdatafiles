@@ -1,0 +1,14 @@
+#! /bin/csh
+#
+#Creates ascii data file for a station
+#Assumes station and polezero file naming convention
+#
+set station=$1
+
+sac << sacend
+read ${station}/${station}_R ${station}/${station}_T ${station}/${station}_Z
+write tmp2 tmp1 tmp3
+quit
+sacend
+sac2helm out=${station}/${station}.data
+rm tmp2 tmp1 tmp3

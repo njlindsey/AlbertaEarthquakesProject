@@ -1,0 +1,53 @@
+#! /bin/bash
+# Plot the event I'm studying in Mendocino, and the nearby seismometers
+# 4/28/2016 Kathryn Materna
+
+# The range for a little scale map in the corner
+biglonW=-130
+biglonE=-110
+biglatS=48
+biglatN=60
+
+# The range for the actual event maps
+lonW=-128
+lonE=-108
+latS=48
+latN=60
+
+range="$lonW/$lonE/$latS/$latN"
+projection="m.3i"
+output="Seismometer_Locations.ps"
+
+# Basemap.  
+# Insert horizontal scale bar, and title
+gmt pscoast -R$range -J$projection -Df -N1 -N2 -Lf-124.58/40.83/40.83/20+jt+u -Wblack -Slightblue -Glightgray -B2:."12 JAN 2016 M4.2 Event in Alberta, Canada": -K > $output
+# Df = full resolution coastline
+
+# Plot the location of the seismometers in little circles
+gmt psxy station_locations -R$range -J$projection -Sc0.2 -Gblack -Wthin,white -K -O >> $output
+gmt pstext station_locations -R$range -J$projection -F+j0 -K -O >> $output
+
+# Plot the location of the event with a red star
+gmt psxy -R$range -J$projection -Sa -Wthin,black -Gred -K -O <<EOF >> $output 
+-117.0254 54.4458 0.6
+EOF
+
+
+
+# Put a tiny map in the corner to orient you
+#bigrange="$biglonW/$biglonE/$biglatS/$biglatN"
+#bigprojection="m0.15i"
+#gmt pscoast -R$bigrange -J$bigprojection -Gdarkseagreen4 -Sskyblue2 -Dh -N2 -K -O >> $output
+#gmt psxy -R$bigrange -J$bigprojection -Wblack -K -O <<EOF >> $output
+#$lonW $latS
+#$lonW $latN
+#$lonE $latN
+#$lonE $latS
+#$lonW $latS
+#EOF
+
+# Add the plate boundaries
+gmt psxy transform.gmt -R$bigrange -J$bigprojection -Wthin,red -K -O >> $output
+gmt psxy ridge.gmt -R$bigrange -J$bigprojection -Wthin,red -K -O >> $output
+gmt psxy trench.gmt -R$bigrange -J$bigprojection -Wthin,red -K -O >> $output
+

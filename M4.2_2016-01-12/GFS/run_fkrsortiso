@@ -1,0 +1,59 @@
+#! /bin/csh
+# Window out the eight vectors for many distances
+# Remember to set NT and DT CORRECTLY!
+# USE wvint9 (The flipped traces are corrected within this
+# code rather than by the external program flip
+#
+set path=($path ../BIN)
+#
+set dt=1.00
+set npts=512
+##
+#set dist=(46 53 155 174 198 206 207 211 234 241 252 258 270 271 276 280 310 316)
+set dist=(206 241 258 270)
+set loopend=4
+set depth=$1
+##
+set count=0
+set j=1
+set vshift=0
+set i=0
+set nvec=0
+rehash
+#
+#
+@ nvec=($loopend - $count) * 10
+while ($count < $loopend)
+@ vshift=$i + 7
+window v0=$vshift e0=0 nt=$npts nx=$nvec nv=1 < vec > tmp1$$
+@ vshift=$i + 4
+window v0=$vshift e0=0 nt=$npts nx=$nvec nv=1 < vec > tmp2$$
+@ vshift=$i + 6
+window v0=$vshift e0=0 nt=$npts nx=$nvec nv=1 < vec > tmp3$$
+@ vshift=$i + 3
+window v0=$vshift e0=0 nt=$npts nx=$nvec nv=1 < vec > tmp4$$
+@ vshift=$i + 1
+window v0=$vshift e0=0 nt=$npts nx=$nvec nv=1 < vec > tmp5$$
+@ vshift=$i + 5
+window v0=$vshift e0=0 nt=$npts nx=$nvec nv=1 < vec > tmp6$$
+@ vshift=$i + 2
+window v0=$vshift e0=0 nt=$npts nx=$nvec nv=1 < vec > tmp7$$
+@ vshift=$i
+window v0=$vshift e0=0 nt=$npts nx=$nvec nv=1 < vec > tmp8$$
+@ vshift=$i + 8
+window v0=$vshift e0=0 nt=$npts nx=$nvec nv=1 < vec > tmp10$$
+@ vshift=$i + 9
+window v0=$vshift e0=0 nt=$npts nx=$nvec nv=1 < vec > tmp9$$
+cat tmp1$$ tmp2$$ tmp3$$ tmp4$$ tmp5$$ tmp6$$ tmp7$$ tmp8$$ tmp9$$ tmp10$$ > junk
+echo $j
+mkHelm format="(6e13.5)" ntr=10 dt=$dt nt=$npts < junk > foxCreekSLU_{$dist[$j]}d{$depth}.disp
+
+#to leave sac-readable files in dir...
+#./write_GFS foxCreekSLU_{$dist[$j]}d{$depth}.disp foxCreekSLU_{$dist[$j]}d{$depth}
+
+#to clear sac-readable files and move to inversion...
+./run_filtsyniso foxCreekSLU_{$dist[$j]}d{$depth}.disp foxCreekSLU_{$dist[$j]}d{$depth}
+@ i += 10
+@ count++
+@ j++
+end

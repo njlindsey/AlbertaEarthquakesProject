@@ -1,0 +1,33 @@
+#! /bin/csh
+#
+#Creates ascii data file for a station
+#Assumes station and polezero file naming convention
+#
+set station=$1
+
+sac << sacend
+read 19971130211700.$station.BHE
+rmean
+transfer from polezero s ${station}_EVBB.zp
+mul 100
+write tmpe
+read 19971130211700.$station.BHN
+rmean
+transfer from polezero s ${station}_NVBB.zp
+mul 100
+write tmpn
+read 19971130211700.$station.BHZ
+rmean
+transfer from polezero s ${station}_ZVBB.zp
+mul 100
+write tmpz
+read tmpe tmpn
+rot to gcp
+read more tmpz
+int
+bp co 0.02 0.05 p 2
+interpolate delta 1.0
+write tmp2 tmp1 tmp3
+quit
+sacend
+sac2helm out={$station}.data

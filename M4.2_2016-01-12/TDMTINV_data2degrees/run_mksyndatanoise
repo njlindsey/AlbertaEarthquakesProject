@@ -1,0 +1,63 @@
+#! /bin/csh
+## This script will add noise of a defined level to synthetic data.
+## Script assumes there are four stations
+## per defines the noise level. 20% of the peak signal.
+set azi=(0.0 83.0 202.0 233.0)
+set dist=(100 200 300 400)
+set strike=23.
+set rake=45.
+set dip=67.
+set moment=1.23e24
+set per=0.35
+
+#Create noise traces and normalize
+sac << eof
+fg random 12 0.3 delta 1.0 npts 410
+bp co 0.02 0.05
+write rant1 ranr1 ranz1 rant2 ranr2 ranz2 rant3 ranr3 ranz3 rant4 ranr4 ranz4
+quit
+eof
+foreach n (`ls ran*`)
+set nn=$n
+echo $nn
+sac << eof
+setbb NAME "$nn"
+getbb NAME
+read %NAME
+evaluate to max &1,depmax
+div %max
+write over
+quit
+eof
+end
+
+foreach n (1 2 3 4)
+putmech azimuth=$azi[$n] strike=$strike rake=$rake dip=$dip moment=$moment in=gil7_{$dist[$n]}d8 out=stat{$n}
+set sta=$n
+sac << eof
+setbb STA $sta
+getbb STA
+setbb PER $per
+getbb PER
+cuterr fillz
+cut -10 400
+read stat%STA%.tan
+evaluate to max &1,depmax
+read rant%STA% ranr%STA% ranz%STA%
+mul %max
+mul %per
+write over
+read stat%STA%.tan
+addf rant%STA%
+write tmp1
+read stat%STA%.rad
+addf ranr%STA%
+write tmp2
+read stat%STA%.ver
+addf ranz%STA%
+write tmp3
+quit
+eof
+sac2helm out=stat{$n}noise.dat
+end
+

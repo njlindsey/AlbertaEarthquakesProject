@@ -1,0 +1,31 @@
+* **********************************
+* Network   (KNETWK): RV
+* Station   (KSTNM) : ATHA
+* Component (KCMPNM): BHZ
+* Location  (KHOLE) : 
+* Start             : 2014,308,17:00:00
+* End               : 2599,365,23:59:59
+* Input Units       : METERS
+* Output Units      : COUNTS
+* Latitude          :  54.713710
+* Longitude         : -113.313790
+* Elevation         :   569.0
+* Depth             : 569.0
+* Dip               : -90.0
+* Azimuth           :   0.0
+* Instrument Comment: N/A
+* Channel Flag      : N/A
+* **********************************
+ZEROS 5
+-108.0000  0.0000
+-161.0000  0.0000
+POLES 8
+-0.0181  0.0180
+-0.0181  -0.0180
+-173.0000  0.0000
+-196.0000  231.0000
+-196.0000  -231.0000
+-732.0000  1415.0000
+-732.0000  -1415.0000
+-13338.9000  0.0000
+CONSTANT 1.476766e+22

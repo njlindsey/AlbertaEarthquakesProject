@@ -1,0 +1,8 @@
+# GMT 5 Session common arguments shelf
+BEGIN GMT 5.1.0
+B	2:.12 JAN 2016 M4.2 Event in Alberta, Canada:
+J	m
+Jm	m.3i
+R	-128/-108/48/60
+L	7
+END

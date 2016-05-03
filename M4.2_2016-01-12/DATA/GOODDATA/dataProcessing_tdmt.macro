@@ -1,0 +1,86 @@
+## MACRO TO CREATE TDMT_INV DATA FILES
+# TO BE RUN FROM DATA DIRECTORY, example: .../GOODDATA/BRLDA/.
+#
+# 0. Load Raw Sac data (assumes response files are in wd also
+# 1. Remove Insturment response
+# 2. rotate to radial and transverse comps using gcp
+# 3. integrate velocity to displacement and bandpass filter low 0.02 - 0.05s
+# 4. run_mkdatafile to create tdmt_inv_iso input datafile for one station
+#
+# INPUT: STATION H1 H2 HZ or STATION HE HN HZ, declaring comps ensures proper I/O
+# 		horizontals in slot $2 and $3 in the E N ordering
+# OUTPUT: 4 *.pdf showing workflow and $STATION.data for tdmt_inv_iso
+# EXAMPLE: "dataProcessing_tdmt.macro BRLDA HE HN HZ"
+#
+# NJL April 2016
+#
+echo $1
+sac << EOF
+
+
+#cp ../../sacDownload/*$1*SAC .
+#cp ../../sacDownload/RESP*$1* .
+cp ../../data_2degrees/*$1*SAC .
+cp ../../data_2degrees/RESP*$1* . 
+cut B N 190000
+r *$1*$2*SAC *$1*$3*SAC *$1*$4*SAC
+p1
+ylabel "Velocity [nm/s]"
+xlabel "Time [s]"
+title "0. Raw Data"
+CHNHDR file 1 KEVNM '$1_$2'
+CHNHDR file 2 KEVNM '$1_$3'
+CHNHDR file 3 KEVNM '$1_$4'
+p1
+qdp off
+saveimg "$1_step0raw.pdf"
+
+rmean
+transfer from evalresp to VEL freq 0.01 0.02 10 20
+div 1.e9 
+mul 100
+write $1_$2 $1_$3 $1_Z
+cut B 0 700
+read $1_$2 $1_$3 $1_Z
+ylabel "Velocity [cm/s]"
+xlabel "Time [s]"
+title "1. Instrument Response Removed"
+CHNHDR file 1 KEVNM '$1_$2'
+CHNHDR file 2 KEVNM '$1_$3'
+CHNHDR file 3 KEVNM '$1_Z'
+p1
+write over
+cut off
+saveimg "$1_step1ir.pdf"
+
+
+read $1_$2 $1_$3
+rotate to gcp
+write $1_R $1_T
+read $1_R $1_T
+title "2. Rotate to GCP"
+CHNHDR file 1 KEVNM '$1_R'
+CHNHDR file 2 KEVNM '$1_T'
+p1
+saveimg "$1_step2rot.pdf"
+
+read $1_R $1_T $1_Z
+int
+bp p 2 co 0.02 0.1
+interpolate delta 1.0
+ylabel "Displacement [cm]"
+title "3. Integrate to Displacement, BP 0.02-0.05s"
+CHNHDR file 1 KEVNM '$1_R'
+CHNHDR file 2 KEVNM '$1_T'
+CHNHDR file 3 KEVNM '$1_Z'
+write over
+p1
+saveimg "$1_step3disp.pdf"
+quit
+EOF
+
+cd ..
+./run_mkdatafiles $1
+cd $1
+
+cp $1.data ../../../TDMTINV_data2degrees

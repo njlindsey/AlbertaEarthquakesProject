@@ -1,0 +1,222 @@
+#! /bin/csh
+#
+##
+##Script to generated synthetic waveform data from 4 stations. Note the focal
+##mechanism prescribed below.
+##
+putmech in=foxCreekSLU_315.78d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=CN.NBC7.dat
+putmech in=foxCreekSLU_270.16d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=CN.NBC4.dat
+putmech in=foxCreekSLU_206.26d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=TD.TD002.dat
+putmech in=foxCreekSLU_210.95d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=TD.TD008.dat
+putmech in=foxCreekSLU_241.09d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=TD.TD009.dat
+putmech in=foxCreekSLU_206.30d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=TD.TD010.dat
+putmech in=foxCreekSLU_279.52d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=TD.TD012.dat
+putmech in=foxCreekSLU_233.62d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=TD.TD011.dat
+putmech in=foxCreekSLU_252.34d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=TD.TD013.dat
+putmech in=foxCreekSLU_174.40d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=TD.TD09A.dat
+putmech in=foxCreekSLU_310.36d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=TD.TD13A.dat
+putmech in=foxCreekSLU_276.22d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=TD.TD029.dat
+putmech in=foxCreekSLU_46.464d8 out=tmp azimuth=212. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 120
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=RV.BRLDA.dat
+putmech in=foxCreekSLU_271.02d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=RV.MANA.dat
+putmech in=foxCreekSLU_258.04d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=RV.RDEA.dat
+putmech in=foxCreekSLU_155.25d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=RV.STPRA.dat
+putmech in=foxCreekSLU_53.494d8 out=tmp azimuth=109. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 120
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=RV.SWHSA.dat
+putmech in=foxCreekSLU_198.29d8 out=tmp azimuth=0. strike=100. rake=30. dip=70 moment=2.04.e+22
+sac << eof
+cuterr fillz
+cut -10 400
+read tmp.tan tmp.rad tmp.ver
+write over
+quit
+eof
+\cp tmp.tan tmp1
+\cp tmp.rad tmp2
+\cp tmp.ver tmp3
+sac2helm out=RV.WTMTA.dat

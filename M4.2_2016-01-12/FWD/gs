@@ -1,0 +1,1 @@
+TD002T_timeseries.png -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=TD002T_timeseries.png

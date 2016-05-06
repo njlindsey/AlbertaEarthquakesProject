@@ -4,38 +4,38 @@
 #
 set   dt=1.00
 set npts=512
-set hcrn=0.1
+set hcrn=0.08
 set lcrn=0.02
 #
 fromHelm < $1 > tmp2
 window nt=$npts nx=10 nv=1 v0=0 < tmp2 > tmp3
-bin2sac par=b2s.par npts=$npts < tmp3 > tss
+bin2sac par=./b2s.par npts=$npts < tmp3 > tss
 window nt=$npts nx=10 nv=1 v0=1 < tmp2 > tmp3
-bin2sac par=b2s.par npts=$npts < tmp3 > tds
+bin2sac par=./b2s.par npts=$npts < tmp3 > tds
 window nt=$npts nx=10 nv=1 v0=2 < tmp2 > tmp3
-bin2sac par=b2s.par npts=$npts < tmp3 > xss
+bin2sac par=./b2s.par npts=$npts < tmp3 > xss
 window nt=$npts nx=10 nv=1 v0=3 < tmp2 > tmp3
-bin2sac par=b2s.par npts=$npts < tmp3 > xds
+bin2sac par=./b2s.par npts=$npts < tmp3 > xds
 window nt=$npts nx=10 nv=1 v0=4 < tmp2 > tmp3
-bin2sac par=b2s.par npts=$npts < tmp3 > xdd
+bin2sac par=./b2s.par npts=$npts < tmp3 > xdd
 window nt=$npts nx=10 nv=1 v0=5 < tmp2 > tmp3
-bin2sac par=b2s.par npts=$npts < tmp3 > zss
+bin2sac par=./b2s.par npts=$npts < tmp3 > zss
 window nt=$npts nx=10 nv=1 v0=6 < tmp2 > tmp3
-bin2sac par=b2s.par npts=$npts < tmp3 > zds
+bin2sac par=./b2s.par npts=$npts < tmp3 > zds
 window nt=$npts nx=10 nv=1 v0=7 < tmp2 > tmp3
-bin2sac par=b2s.par npts=$npts < tmp3 > zdd
+bin2sac par=./b2s.par npts=$npts < tmp3 > zdd
 window nt=$npts nx=10 nv=1 v0=8 < tmp2 > tmp3
-bin2sac par=b2s.par npts=$npts < tmp3 > rex
+bin2sac par=./b2s.par npts=$npts < tmp3 > rex
 window nt=$npts nx=10 nv=1 v0=9 < tmp2 > tmp3
-bin2sac par=b2s.par npts=$npts < tmp3 > zex
+bin2sac par=./b2s.par npts=$npts < tmp3 > zex
 sac << sacend
 setbb HCRN $hcrn
 getbb HCRN
 setbb LCRN $lcrn
 getbb LCRN
 read tss tds xss xds xdd zss zds zdd rex zex
+ch b 122.55
 bp p 2 co %LCRN %HCRN
-ch b 0 
 write over
 quit
 sacend

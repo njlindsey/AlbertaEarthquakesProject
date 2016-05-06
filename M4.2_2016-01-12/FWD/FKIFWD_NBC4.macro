@@ -1,0 +1,84 @@
+#
+
+xlim off
+ylim off
+
+read synth.tan synth.rad synth.ver
+ch nzyear 2016 nzjday 012 nzhour 18 nzmin 27 nzsec 18 nzmsec 28 b 0
+write over
+##########################
+# DATA
+r NBC4_T synth.tan
+qdp off
+linlin
+color black increment
+xlim 120 300
+ylim -2e-4 2e-4
+p2
+xlim off
+ylim off
+saveimg T_timeseries.ps
+
+##########################
+
+##########################
+r NBC4_T synth.tan
+fft
+loglin
+qdp off
+color black increment
+p2
+saveimg T_spectra.ps
+##########################
+
+##########################
+# DATA
+r NBC4_R synth.rad
+qdp off
+linlin
+color black increment
+xlim 120 300
+ylim -2e-4 2e-4
+p2
+xlim off
+ylim off
+saveimg R_timeseries.ps
+
+##########################
+
+xlim off
+r NBC4_R synth.rad
+fft
+loglin
+qdp off
+color black increment
+p2
+saveimg R_spectra.ps
+##########################
+
+##########################
+# DATA
+r NBC4_Z synth.ver
+qdp off
+linlin
+color black increment
+xlim 120 300
+ylim -2e-4 2e-4
+p2
+xlim off
+ylim off
+saveimg Z_timeseries.ps
+
+##########################
+
+xlim off
+r NBC4_Z synth.ver
+fft
+loglin
+qdp off
+color black increment
+p2
+saveimg Z_spectra.ps
+##########################
+
+quit

@@ -1,0 +1,24 @@
+3 8 1 5 1
+BKS.data 142. 331.5 0 120
+CMB.data 171.  33.6 0 120
+KCC.data 201.  71.1 53 120
+gil7_142d8 0 120
+gil7_171d8 0 120
+gil7_201d8 0 120
+mtinv.out
+
+/*One station example*/
+1 8 1 5 1
+BKS.data 142. 331.5 0 120
+gil7_142d8 0 120
+mtinv.out
+
+/*Three station example*/
+3 8 1 5 1
+BKS.data 142. 331.5 0 120
+CMB.data 171.  33.6 0 120
+KCC.data 201.  71.1 53 120
+gil7_142d8 0 120
+gil7_171d8 0 120
+gil7_201d8 0 120
+mtinv.out

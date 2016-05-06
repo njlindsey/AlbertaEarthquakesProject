@@ -1,0 +1,11 @@
+# GMT 5 Session common arguments shelf
+BEGIN GMT 5.1.0
+B	a10f1:Variance Reduction:/a10f1wsNe
+J	X
+Jm	m4c
+JX	X12/20
+R	0/40/-25/0
+X	3
+Y	5
+L	54
+END

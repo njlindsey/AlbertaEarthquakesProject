@@ -144721,3 +144721,61 @@ Variance=4.888e-10
 VarRed=3.625e+01
 Var/Pdc=6.819e-12
 Quality=1
+isoflag=5 Depth=8
+Station Information
+Station(0): TD002.data  R=206.0km  AZI=123.0  W=1.000  Zcor=15
+Station(1): TD009.data  R=241.0km  AZI=169.0  W=1.170  Zcor=13
+Station(2): RDEA.data  R=258.0km  AZI=24.0  W=1.252  Zcor=14
+Station(3): NBC4.data  R=270.0km  AZI=300.0  W=1.311  Zcor=10
+isomoment=0
+MT Aki Convention
+Mxx=13.556
+Mxy=-52.496
+Mxz=-10.388
+Myy=-7.134
+Myz=7.712
+Mzz=-6.422
+eigen1=-8.95432e+20
+eigen2=-5.03044e+21
+eigen3=5.92587e+21
+Mo=5.47816e+21  (5.92587e+21)
+Mw=3.76
+Strike=276 ; 185
+Rake=9 ; 173
+Dip=83 ; 82
+Pdc=70
+Pclvd=30
+Piso=0
+Variance=4.818e-10
+VarRed=3.705e+01
+Var/Pdc=6.905e-12
+Quality=1
+isoflag=6 Depth=8
+Station Information
+Station(0): TD002.data  R=206.0km  AZI=123.0  W=1.000  Zcor=15
+Station(1): TD009.data  R=241.0km  AZI=169.0  W=1.170  Zcor=13
+Station(2): RDEA.data  R=258.0km  AZI=24.0  W=1.252  Zcor=14
+Station(3): NBC4.data  R=270.0km  AZI=300.0  W=1.311  Zcor=10
+isomoment=-1.27143e+21
+MT Aki Convention
+Mxx=27.573
+Mxy=-50.981
+Mxz=-10.452
+Myy=7.194
+Myz=7.716
+Mzz=3.375
+eigen1=-1.17862e+21
+eigen2=-4.73318e+21
+eigen3=5.9118e+21
+Mo=5.32249e+21  (7.18323e+21)
+Mw=3.87
+Strike=276 ; 185
+Rake=8 ; 173
+Dip=83 ; 82
+Pdc=49
+Pclvd=32
+Piso=19
+Variance=4.730e-10
+VarRed=3.806e+01
+Var/Pdc=9.745e-12
+Quality=1

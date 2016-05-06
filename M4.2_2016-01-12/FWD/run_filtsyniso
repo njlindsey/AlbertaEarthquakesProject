@@ -34,6 +34,7 @@ getbb HCRN
 setbb LCRN $lcrn
 getbb LCRN
 read tss tds xss xds xdd zss zds zdd rex zex
+ch b 122.55
 bp p 2 co %LCRN %HCRN
 write over
 quit

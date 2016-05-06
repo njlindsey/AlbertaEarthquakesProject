@@ -1,12 +1,12 @@
-4 10 1 5 1
+4 8 1 6 1
 TD002.data 206. 123. 15 150
 TD009.data 241. 169. 13 150
 RDEA.data 258. 24. 14 150
 NBC4.data 270. 300. 10 150
-../GFS/foxCreekSLU_206d10 150
-../GFS/foxCreekSLU_241d10 150
-../GFS/foxCreekSLU_258d10 150
-../GFS/foxCreekSLU_270d10 150
+../GFS/foxCreekSLU_206d8 150
+../GFS/foxCreekSLU_241d8 150
+../GFS/foxCreekSLU_258d8 150
+../GFS/foxCreekSLU_270d8 150
 tdmt_result.out
 
 ################

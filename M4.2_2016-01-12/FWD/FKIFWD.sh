@@ -18,13 +18,13 @@ az2=169
 az3=24
 az4=300
 
-model=../GFS/MODEL_foxCreekSLU_8km_it0
+model=MODEL_foxCreekSLU_8km_it0
 depth=8
 
 str=276
 rake=9
 dip=83
-mo=5.50e+21
+mo=2.0e+22
 
 # STEP 1 -- delete old complex spectra
 rm GREEN.1
@@ -53,33 +53,33 @@ putmech in=foxCreekSLU_270d8 out=synth azimuth=$az4 strike=$str rake=$rake dip=$
 
 # STEP 6 -- READ synth files, change header times, Overlay on DATA, Write to PS, GS CONVERT PS TO PNG
 sac FKIFWD_$sta1.macro
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1T_timeseries.png T_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1R_timeseries.png R_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1Z_timeseries.png Z_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1T_spectra.png T_spectra.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1R_spectra.png R_spectra.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1Z_spectra.png Z_spectra.ps
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1T_timeseries.png T_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1R_timeseries.png R_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1Z_timeseries.png Z_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1T_spectra.png T_spectra.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1R_spectra.png R_spectra.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=1Z_spectra.png Z_spectra.ps >&GS.log
 sac FKIFWD_$sta2.macro
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2T_timeseries.png T_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2R_timeseries.png R_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2Z_timeseries.png Z_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2T_spectra.png T_spectra.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2R_spectra.png R_spectra.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2Z_spectra.png Z_spectra.ps
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2T_timeseries.png T_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2R_timeseries.png R_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2Z_timeseries.png Z_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2T_spectra.png T_spectra.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2R_spectra.png R_spectra.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2Z_spectra.png Z_spectra.ps >&GS.log
 sac FKIFWD_$sta1.macro
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3T_timeseries.png T_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3R_timeseries.png R_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3Z_timeseries.png Z_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3T_spectra.png T_spectra.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3R_spectra.png R_spectra.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3Z_spectra.png Z_spectra.ps
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3T_timeseries.png T_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3R_timeseries.png R_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3Z_timeseries.png Z_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3T_spectra.png T_spectra.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3R_spectra.png R_spectra.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3Z_spectra.png Z_spectra.ps >&GS.log
 sac FKIFWD_$sta1.macro
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4T_timeseries.png T_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4R_timeseries.png R_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4Z_timeseries.png Z_timeseries.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4T_spectra.png T_spectra.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4R_spectra.png R_spectra.ps
-gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4Z_spectra.png Z_spectra.ps
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4T_timeseries.png T_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4R_timeseries.png R_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4Z_timeseries.png Z_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4T_spectra.png T_spectra.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4R_spectra.png R_spectra.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4Z_spectra.png Z_spectra.ps >&GS.log
 
 # STEP 7 -- SUBPLOT PNGs to single PDF per station
 python ../../scripts/sac_multiPng2SubplotPdf.py

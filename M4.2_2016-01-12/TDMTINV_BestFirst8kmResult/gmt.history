@@ -1,11 +1,12 @@
 # GMT 5 Session common arguments shelf
 BEGIN GMT 5.1.0
-B	a10f1:Variance Reduction:/a10f1wsNe
-J	X
+B	a1f1/a1f1nesw
+J	x
 Jm	m4c
 JX	X12/20
-R	0/40/-25/0
-X	3
-Y	5
-L	54
+Jx	x2/2
+R	0/4/2/6
+X	1
+Y	12
+L	3
 END

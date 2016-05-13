@@ -1,9 +1,9 @@
 #! /bin/csh
 
 set dt=1.00
-set npts=480
-set hcrn=0.05
-set lcrn=0.02
+set npts=512
+set hcrn=0.3
+set lcrn=0.05
 
 fromHelm < $1 > tmp2
 window nt=$npts nx=10 nv=1 v0=0 < tmp2 > tmp3
@@ -33,7 +33,7 @@ getbb HCRN
 setbb LCRN $lcrn
 getbb LCRN
 read tss tds xss xds xdd zss zds zdd rex zex
-bp p 2 co %LCRN %HCRN
+bp p 1 co %LCRN %HCRN
 write over
 quit
 sacend

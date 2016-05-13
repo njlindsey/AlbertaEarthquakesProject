@@ -1,17 +1,18 @@
-################
-# TRYING 5 STATION SOLUTION...
 5 8 1 5 1
-SWHSA.data 53. 19. 20 150
-TD002.data 206. 123. 15 150
-TD009.data 241. 169. 13 150
-RDEA.data 258. 24. 14 150
-NBC4.data 270. 300. 10 150
-../GFS/foxCreekSLU_53d8 150
-../GFS/foxCreekSLU_206d8 150
-../GFS/foxCreekSLU_241d8 150
-../GFS/foxCreekSLU_258d8 150
-../GFS/foxCreekSLU_270d8 150
+BRLDA.data 46. 212. 5 120
+SWHSA.data 53. 19. 8 120
+TD002.data 206. 123. 12 120
+TD009.data 241. 169. 12 120
+NBC7.data 316. 312. 9 120
+../GFS/foxCreekSLU_46d8 120
+../GFS/foxCreekSLU_53d8 120
+../GFS/foxCreekSLU_206d8 120
+../GFS/foxCreekSLU_241d8 120
+../GFS/foxCreekSLU_316d8 120
 tdmt_result.out
+
+####
+
 
 ################
 

@@ -35,23 +35,24 @@ qdp off
 saveimg "$1_step0raw.pdf"
 
 rmean
+rtrend
 transfer from evalresp to VEL freq 0.01 0.02 10 20
 div 1.e9
 mul 100
 write $1_$2 $1_$3 $1_Z
 cut B 0 600
 read $1_$2 $1_$3 $1_Z
-ylabel "Velocity [cm/s]"
+int
+ylabel "Displacement [cm]"
 xlabel "Time [s]"
-title "1. Instrument Response Removed"
+title "1. Instrument Response Removed, Int to Disp"
 CHNHDR file 1 KEVNM '$1_$2'
 CHNHDR file 2 KEVNM '$1_$3'
 CHNHDR file 3 KEVNM '$1_Z'
 p1
 write over
 cut off
-saveimg "$1_step1ir.pdf"
-
+saveimg "$1_step1irInt2Disp.pdf"
 
 read $1_$2 $1_$3
 rotate to gcp
@@ -64,20 +65,35 @@ p1
 saveimg "$1_step2rot.pdf"
 
 read $1_R $1_T $1_Z
-int
-bp p 2 co 0.02 0.08
-interpolate delta 1.0
+cut o -120 300
+read
+CHNHDR file 1 KEVNM '$1_R'
+CHNHDR file 2 KEVNM '$1_T'
+CHNHDR file 3 KEVNM '$1_Z'
+bp p 1 co 0.05 0.1
+interpolate delta 1
 write over
+cut off
+ylabel "Displacement [cm]"
+title "3. BP, Interpolate"
+p1
+saveimg "$1_step3BPthenInterp.pdf"
+
+read $1_R $1_T $1_Z
 cut o 0 300
 read
-ylabel "Displacement [cm]"
-title "3. Integrate to Displacement, BP 0.02-0.05s"
 CHNHDR file 1 KEVNM '$1_R'
 CHNHDR file 2 KEVNM '$1_T'
 CHNHDR file 3 KEVNM '$1_Z'
 write over
+cut off
+ch B 0
+write over
+title "4. Cut at Origin"
+ylabel "Displacement [cm]"
 p1
-saveimg "$1_step3disp.pdf"
+saveimg "$1_step4cutatOrigin.pdf"
+
 quit
 EOF
 
@@ -85,4 +101,4 @@ cd ..
 ./run_mkdatafiles $1
 cd $1
 
-cp $1.data ../../../TDMTINV
+cp $1.data ../../../TDMTINV_BestFirst8kmResult/

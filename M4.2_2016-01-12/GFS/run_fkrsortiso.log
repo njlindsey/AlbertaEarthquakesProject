@@ -1,50 +1,50 @@
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=7 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=4 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=6 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=3 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=1 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=5 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=2 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=0 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=8 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=9 dv=1
   ne=512 e0=0 de=1
@@ -135,8 +135,8 @@ trace=9
  SEISMIC ANALYSIS CODE [11/11/2013 (Version 101.6a)]
  Copyright 1995 Regents of the University of California
 
- HCRN = 0.08
- LCRN = 0.02
+ HCRN = 0.1
+ LCRN = 0.05
 npts=512   dt=1.000000
 npts=512   dt=1.000000
 npts=512   dt=1.000000
@@ -151,52 +151,52 @@ mkHelm:  input format: (6e12.5)
           format used: (6e12.5)
 ntr=10
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=17 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=14 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=16 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=13 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=11 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=15 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=12 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=10 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=18 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=19 dv=1
   ne=512 e0=0 de=1
@@ -287,8 +287,8 @@ trace=9
  SEISMIC ANALYSIS CODE [11/11/2013 (Version 101.6a)]
  Copyright 1995 Regents of the University of California
 
- HCRN = 0.08
- LCRN = 0.02
+ HCRN = 0.1
+ LCRN = 0.05
 npts=512   dt=1.000000
 npts=512   dt=1.000000
 npts=512   dt=1.000000
@@ -303,52 +303,52 @@ mkHelm:  input format: (6e12.5)
           format used: (6e12.5)
 ntr=10
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=27 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=24 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=26 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=23 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=21 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=25 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=22 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=20 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=28 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=29 dv=1
   ne=512 e0=0 de=1
@@ -439,8 +439,8 @@ trace=9
  SEISMIC ANALYSIS CODE [11/11/2013 (Version 101.6a)]
  Copyright 1995 Regents of the University of California
 
- HCRN = 0.08
- LCRN = 0.02
+ HCRN = 0.1
+ LCRN = 0.05
 npts=512   dt=1.000000
 npts=512   dt=1.000000
 npts=512   dt=1.000000
@@ -455,52 +455,52 @@ mkHelm:  input format: (6e12.5)
           format used: (6e12.5)
 ntr=10
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=37 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=34 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=36 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=33 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=31 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=35 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=32 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=30 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=38 dv=1
   ne=512 e0=0 de=1
   in= out=
-  planes=1 vecs=40 len=512 esize=4
+  planes=1 vecs=50 len=512 esize=4
   np=1 p0=0 dp=1
   nv=1 v0=39 dv=1
   ne=512 e0=0 de=1
@@ -591,8 +591,160 @@ trace=9
  SEISMIC ANALYSIS CODE [11/11/2013 (Version 101.6a)]
  Copyright 1995 Regents of the University of California
 
- HCRN = 0.08
- LCRN = 0.02
+ HCRN = 0.1
+ LCRN = 0.05
+npts=512   dt=1.000000
+npts=512   dt=1.000000
+npts=512   dt=1.000000
+npts=512   dt=1.000000
+npts=512   dt=1.000000
+npts=512   dt=1.000000
+npts=512   dt=1.000000
+npts=512   dt=1.000000
+npts=512   dt=1.000000
+npts=512   dt=1.000000
+mkHelm:  input format: (6e12.5)
+          format used: (6e12.5)
+ntr=10
+  in= out=
+  planes=1 vecs=50 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=47 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=50 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=44 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=50 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=46 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=50 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=43 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=50 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=41 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=50 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=45 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=50 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=42 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=50 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=40 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=50 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=48 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=50 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=49 dv=1
+  ne=512 e0=0 de=1
+5
+mkHelm:  input format: (6e13.5)
+          format used: (6e13.5)
+ntr=10
+ntr=10
+n=512  dt=1
+trace=0
+0.0000e+00     0.0000e+00      0  0  0.00
+     512   1.00000  0.0000e+00
+trace=1
+0.0000e+00     0.0000e+00      0  0  0.00
+     512   1.00000  0.0000e+00
+trace=2
+0.0000e+00     0.0000e+00      0  0  0.00
+     512   1.00000  0.0000e+00
+trace=3
+0.0000e+00     0.0000e+00      0  0  0.00
+     512   1.00000  0.0000e+00
+trace=4
+0.0000e+00     0.0000e+00      0  0  0.00
+     512   1.00000  0.0000e+00
+trace=5
+0.0000e+00     0.0000e+00      0  0  0.00
+     512   1.00000  0.0000e+00
+trace=6
+0.0000e+00     0.0000e+00      0  0  0.00
+     512   1.00000  0.0000e+00
+trace=7
+0.0000e+00     0.0000e+00      0  0  0.00
+     512   1.00000  0.0000e+00
+trace=8
+0.0000e+00     0.0000e+00      0  0  0.00
+     512   1.00000  0.0000e+00
+trace=9
+  in= out=
+  planes=1 vecs=10 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=0 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=10 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=1 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=10 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=2 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=10 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=3 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=10 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=4 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=10 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=5 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=10 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=6 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=10 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=7 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=10 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=8 dv=1
+  ne=512 e0=0 de=1
+  in= out=
+  planes=1 vecs=10 len=512 esize=4
+  np=1 p0=0 dp=1
+  nv=1 v0=9 dv=1
+  ne=512 e0=0 de=1
+ SEISMIC ANALYSIS CODE [11/11/2013 (Version 101.6a)]
+ Copyright 1995 Regents of the University of California
+
+ HCRN = 0.1
+ LCRN = 0.05
 npts=512   dt=1.000000
 npts=512   dt=1.000000
 npts=512   dt=1.000000

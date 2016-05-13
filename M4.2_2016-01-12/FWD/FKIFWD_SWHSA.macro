@@ -1,0 +1,81 @@
+#
+xlim off
+ylim off
+
+read synth.tan synth.rad synth.ver
+ch nzyear 2016 nzjday 012 nzhour 18 nzmin 27 nzsec 20 nzmsec 00
+write over
+##########################
+# DATA
+r SWHSA_T synth.tan
+qdp off
+linlin
+color black increment
+xlim 0 120
+ylim -2e-4 2e-4
+p2
+xlim off
+ylim off
+saveimg T_timeseries.ps
+
+##########################
+
+r SWHSA_T synth.tan
+fft
+loglin
+qdp off
+color black increment
+p2
+saveimg T_spectra.ps
+##########################
+
+##########################
+# DATA
+r SWHSA_R synth.rad
+qdp off
+linlin
+color black increment
+xlim 0 120
+ylim -2e-4 2e-4
+p2
+xlim off
+ylim off
+saveimg R_timeseries.ps
+
+##########################
+
+xlim off
+r SWHSA_R synth.rad
+fft
+loglin
+qdp off
+color black increment
+p2
+saveimg R_spectra.ps
+##########################
+
+##########################
+# DATA
+r SWHSA_Z synth.ver
+qdp off
+color black increment
+linlin
+xlim 0 120
+ylim -2e-4 2e-4
+p2
+xlim off
+ylim off
+saveimg Z_timeseries.ps
+
+##########################
+
+xlim off
+r SWHSA_Z synth.ver
+fft
+loglin
+qdp off
+color black increment
+p2
+saveimg Z_spectra.ps
+##########################
+quit

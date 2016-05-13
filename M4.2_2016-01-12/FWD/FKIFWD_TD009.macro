@@ -3,7 +3,7 @@ xlim off
 ylim off
 
 read synth.tan synth.rad synth.ver
-ch nzyear 2016 nzjday 012 nzhour 18 nzmin 27 nzsec 18 nzmsec 28 b 0
+ch nzyear 2016 nzjday 012 nzhour 18 nzmin 25 nzsec 20 nzmsec 00 b 0
 write over
 ##########################
 # DATA

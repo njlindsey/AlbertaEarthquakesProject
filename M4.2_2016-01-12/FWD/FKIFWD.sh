@@ -8,23 +8,25 @@
 # NATE LINDSEY April 2016
 
 # USER INPUT FOR CALLING and LABELING FIGS
-sta1=TD002
-sta2=TD009
-sta3=RDEA
-sta4=NBC4
+sta1=BRLDA
+sta2=SWHSA
+sta3=TD002
+sta4=TD009
+sta5=NBC7
 
-az1=123
-az2=169
-az3=24
-az4=300
+az1=212
+az2=19
+az3=123
+az4=169
+az4=312
 
 model=MODEL_foxCreekSLU_8km_it0
 depth=8
 
-str=276
-rake=9
-dip=83
-mo=2.0e+22
+str=282
+rake=4
+dip=76
+mo=7.7e+21
 
 # STEP 1 -- delete old complex spectra
 rm GREEN.1
@@ -46,10 +48,11 @@ echo "d" | wvint9
 # Green's functions focal parameter coefficients calculated using mksyn_grt.m,
 # or the tdmt_invc_iso solution. Write 3 component displacement data to SAC.
 # OUTPUT: SAC-files synth.tan, synth.rad, synth.ver
-putmech in=foxCreekSLU_206d8 out=synth azimuth=$az1 strike=$str rake=$rake dip=$dip moment=$mo
-putmech in=foxCreekSLU_241d8 out=synth azimuth=$az2 strike=$str rake=$rake dip=$dip moment=$mo
-putmech in=foxCreekSLU_258d8 out=synth azimuth=$az3 strike=$str rake=$rake dip=$dip moment=$mo
-putmech in=foxCreekSLU_270d8 out=synth azimuth=$az4 strike=$str rake=$rake dip=$dip moment=$mo
+putmech in=foxCreekSLU_46d8 out=synth azimuth=$az3 strike=$str rake=$rake dip=$dip moment=$mo
+putmech in=foxCreekSLU_53d8 out=synth azimuth=$az4 strike=$str rake=$rake dip=$dip moment=$mo
+putmech in=foxCreekSLU_206d8 out=synth azimuth=$az3 strike=$str rake=$rake dip=$dip moment=$mo
+putmech in=foxCreekSLU_241d8 out=synth azimuth=$az4 strike=$str rake=$rake dip=$dip moment=$mo
+putmech in=foxCreekSLU_316d8 out=synth azimuth=$az4 strike=$str rake=$rake dip=$dip moment=$mo
 
 # STEP 6 -- READ synth files, change header times, Overlay on DATA, Write to PS, GS CONVERT PS TO PNG
 sac FKIFWD_$sta1.macro
@@ -66,14 +69,21 @@ gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2T_spectra.png T_spectra.ps >&GS.log
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2R_spectra.png R_spectra.ps >&GS.log
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=2Z_spectra.png Z_spectra.ps >&GS.log
-sac FKIFWD_$sta1.macro
+sac FKIFWD_$sta3.macro
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3T_timeseries.png T_timeseries.ps >&GS.log
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3R_timeseries.png R_timeseries.ps >&GS.log
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3Z_timeseries.png Z_timeseries.ps >&GS.log
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3T_spectra.png T_spectra.ps >&GS.log
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3R_spectra.png R_spectra.ps >&GS.log
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=3Z_spectra.png Z_spectra.ps >&GS.log
-sac FKIFWD_$sta1.macro
+sac FKIFWD_$sta4.macro
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4T_timeseries.png T_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4R_timeseries.png R_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4Z_timeseries.png Z_timeseries.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4T_spectra.png T_spectra.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4R_spectra.png R_spectra.ps >&GS.log
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4Z_spectra.png Z_spectra.ps >&GS.log
+sac FKIFWD_$sta5.macro
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4T_timeseries.png T_timeseries.ps >&GS.log
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4R_timeseries.png R_timeseries.ps >&GS.log
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -dGraphicsAlphaBits=4 -sOutputFile=4Z_timeseries.png Z_timeseries.ps >&GS.log

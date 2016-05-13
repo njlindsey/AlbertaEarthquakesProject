@@ -10,8 +10,8 @@ set dt=1.00
 set npts=512
 ##
 #set dist=(46 53 155 174 198 206 207 211 234 241 252 258 270 271 276 280 310 316)
-set dist=(206 241 258 270)
-set loopend=4
+set dist=(46 53 206 241 316)
+set loopend=5
 set depth=$1
 ##
 set count=0
